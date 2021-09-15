@@ -1,7 +1,7 @@
 <template>
     <div class="flip-container" :class="{ 'flipped': flipped}" @click="flipCard()">
         <div class="card-container">
-            <div class="card common front">
+            <div class="card front">
                 <img class="contents" src="https://i.imgur.com/pfr8bB3.png" />
             </div>
             <div class="card common back">
@@ -103,6 +103,7 @@ export default Vue.extend({
 
 .card.rare {
     background: #f1ba24;
+    box-shadow: 0px 0px 20px #f1ba24;
 }
 .card.uncommon {
     background: #b12659;
