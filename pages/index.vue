@@ -1,43 +1,72 @@
 <template>
   <div class="container">
     <div>
-      <NuxtLogo />
-      <h1 class="title">
-        Welcome to the Vant + Nuxt.js template
-      </h1>
-      <div class="links">
-        <van-button type="primary" url="https://nuxtjs.org/">
-          Documentation
-        </van-button>
-        <van-button url="https://github.com/nuxt/nuxt.js">
-          GitHub
-        </van-button>
-        <van-button url="https://vant-contrib.gitee.io/vant">
-          Vant UI
-        </van-button>
+      <img class="logo" src="https://i.imgur.com/CIV2Yhq.png" />
+
+      <div class="card-grid">
+        <div v-for="card in cards" class="card-flip">
+          <CardFlip :card="card" />
+        </div>
       </div>
-      <van-grid :border="false" :column-num="5">
-        <van-grid-item>
-          <Card :owl="{ rarity: 'rare', imgURL: 'https://i.imgur.com/8P24q8A.png'}" />
-        </van-grid-item>
-        <van-grid-item>
-          <Card :owl="{ rarity: 'uncommon', imgURL: 'https://i.imgur.com/Ppl525s.png'}" />
-        </van-grid-item>
-        <van-grid-item>
-          <Card :owl="{ rarity: 'uncommon', imgURL: 'https://i.imgur.com/lFmgnFj.png'}" />
-        </van-grid-item>
-        <van-grid-item>
-          <Card :owl="{ rarity: 'common', imgURL: 'https://i.imgur.com/8P24q8A.png'}" />
-        </van-grid-item>
-        <van-grid-item>
-          <NewFlip />
-        </van-grid-item>
-      </van-grid>
+
+      <van-button type="primary">
+        OPEN ANOTHER PACK
+      </van-button>
     </div>
   </div>
 </template>
 
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+  data() {
+    return {
+      cards: [
+        {
+          rarity: 'rare',
+          imgURL: 'https://i.imgur.com/8P24q8A.png',
+        },
+        {
+          rarity: 'uncommon',
+          imgURL: 'https://i.imgur.com/Ppl525s.png',
+        },
+        {
+          rarity: 'common',
+          imgURL: 'https://i.imgur.com/lFmgnFj.png',
+        },
+        {
+          rarity: 'common',
+          imgURL: 'https://i.imgur.com/8P24q8A.png',
+        },
+        {
+          rarity: 'common',
+          imgURL: 'https://i.imgur.com/8P24q8A.png',
+        },
+      ]
+    }
+  }
+})
+</script>
+
 <style>
+.logo {
+  height: 100px;
+}
+
+.card-grid {
+  display: flex;
+  justify-content: center;
+  background: #22282e;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.card-flip {
+  margin: 10px;
+}
+
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -45,6 +74,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  background:#22282e;
 }
 
 .title {

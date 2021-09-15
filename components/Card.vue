@@ -9,7 +9,7 @@ import Vue from 'vue'
 
 export default Vue.extend({
     props: {
-        owl: {
+        card: {
             type: Object,
             default () {
                 return {
@@ -21,8 +21,8 @@ export default Vue.extend({
     },
     data() {
         return {
-            rarity: this.owl.rarity,
-            imgURL: this.owl.imgURL
+            rarity: this.card.rarity,
+            imgURL: this.card.imgURL
         }
     }
 })
@@ -32,7 +32,7 @@ export default Vue.extend({
 .card {
     width: 100%;
     border-radius: 12px;
-    box-shadow: #ebedf0 0 4px 12px;
+    /* box-shadow: #0f0f0f 0 4px 12px; */
     position: relative;
     padding-top: 140%
 }
