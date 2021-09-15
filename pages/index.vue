@@ -4,7 +4,7 @@
       <img class="logo" src="https://i.imgur.com/CIV2Yhq.png" />
 
       <div class="card-grid">
-        <div v-for="card in cards" class="card-flip">
+        <div v-for="card in cards" class="card-flip" :key="card">
           <CardFlip :card="card" />
         </div>
       </div>
