@@ -1,0 +1,50 @@
+{
+    "owl_01": {
+        "rarity": "uncommon",
+        "imgURL": "https://i.imgur.com/RzpbCJg.png"
+    },
+    "owl_02": {
+        "rarity": "common",
+        "imgURL": "https://i.imgur.com/qKiV3dI.png"
+    },
+    "owl_03": {
+        "rarity": "common",
+        "imgURL": "https://i.imgur.com/b2YWkJq.png"
+    },
+    "owl_04": {
+        "rarity": "common",
+        "imgURL": "https://i.imgur.com/aNPifqg.png"
+    },
+    "owl_05": {
+        "rarity": "common",
+        "imgURL": "https://i.imgur.com/lFmgnFj.png"
+    },
+    "owl_06": {
+        "rarity": "uncommon",
+        "imgURL": "https://i.imgur.com/Xl5borx.png"
+    },
+    "owl_07": {
+        "rarity": "common",
+        "imgURL": "https://i.imgur.com/Ppl525s.png"
+    },
+    "owl_08": {
+        "rarity": "common",
+        "imgURL": "https://i.imgur.com/t9fnfaY.png"
+    },
+    "owl_09": {
+        "rarity": "rare",
+        "imgURL": "https://i.imgur.com/UVrQwu4.png"
+    },
+    "owl_10": {
+        "rarity": "rare",
+        "imgURL": "https://i.imgur.com/nfXbo4I.png"
+    },
+    "owl_11": {
+        "rarity": "uncommon",
+        "imgURL": "https://i.imgur.com/8P24q8A.png"
+    },
+    "owl_12": {
+        "rarity": "ultra-rare",
+        "imgURL": "https://i.imgur.com/CIV2Yhq.png"
+    }
+}

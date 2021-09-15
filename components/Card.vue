@@ -37,14 +37,19 @@ export default Vue.extend({
     padding-top: 140%
 }
 
+.card.ultra-rare {
+    background: #72286d;
+    box-shadow: 0px 0px 20px #72286d;
+}
 .card.rare {
     background: #f1ba24;
+    box-shadow: 0px 0px 20px #f1ba24;
 }
 .card.uncommon {
     background: #b12659;
 }
 .card.common {
-    background: #72286d;
+    background: #84d4d4;
 }
 
 .owl {

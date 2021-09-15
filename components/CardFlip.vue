@@ -4,7 +4,7 @@
             <div class="card front">
                 <img class="contents" src="https://i.imgur.com/pfr8bB3.png" />
             </div>
-            <div class="card common back">
+            <div class="card back">
                 <Card :card="card" />           
             </div>
         </div>
@@ -99,26 +99,6 @@ export default Vue.extend({
     justify-content: center;
     border-radius: 12px;
     box-shadow: #252525 0 4px 12px;
-}
-
-.card.rare {
-    background: #f1ba24;
-    box-shadow: 0px 0px 20px #f1ba24;
-}
-.card.uncommon {
-    background: #b12659;
-}
-.card.common {
-    background: #72286d;
-}
-
-.owl {
-    height: 350px;
-    width: 250px;
-    left: 50%;
-    top: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
 }
 
 .contents {

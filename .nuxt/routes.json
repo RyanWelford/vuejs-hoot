@@ -3,7 +3,6 @@
     "name": "index",
     "path": "/",
     "component": "/Users/ryanwelford/Documents/Projects/VueJS/vuejs-hoot/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_98fab1e4"
+    "chunkName": "pages/index"
   }
 ]

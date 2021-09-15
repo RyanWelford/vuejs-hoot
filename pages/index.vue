@@ -9,15 +9,18 @@
         </div>
       </div>
 
-      <van-button type="primary">
+      <!-- <van-button type="primary">
         OPEN ANOTHER PACK
-      </van-button>
+      </van-button> -->
+
+      <a class="attribution" href="https://www.vecteezy.com/free-vector/origami">Origami Vectors by Vecteezy</a>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from 'vue';
+
 export default Vue.extend({
   data() {
     return {
@@ -105,5 +108,9 @@ export default Vue.extend({
 
 .links {
   padding-top: 15px;
+}
+
+.attribution {
+  color:#6d6d6d;
 }
 </style>
