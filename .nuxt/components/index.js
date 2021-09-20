@@ -1,4 +1,3 @@
-export { default as Card } from '../../components/Card.vue'
 export { default as CardFlip } from '../../components/CardFlip.vue'
 
 // nuxt/nuxt.js#8607

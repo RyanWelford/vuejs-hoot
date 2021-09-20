@@ -20,8 +20,8 @@ var rarities = [
         chance: 3
     }
 ];
-  
-export function pickRarity() {
+
+function pickRarity() {
     // Calculate chances for common
     var filler = 100 - rarities.map(r => r.chance).reduce((sum, current) => sum + current);
   
@@ -43,7 +43,7 @@ export function pickRarity() {
 
 
 
-export function packBuilder(sourceDeck) {
+function packBuilder(sourceDeck) {
     let deck = [];
 
     for (let i=0; i<5; i++) {

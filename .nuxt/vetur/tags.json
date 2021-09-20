@@ -1,7 +1,4 @@
 {
-  "Card": {
-    "description": "Auto imported from components/Card.vue"
-  },
   "CardFlip": {
     "description": "Auto imported from components/CardFlip.vue"
   }

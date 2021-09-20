@@ -37,7 +37,7 @@ let deck: Object[] = [];
 export default Vue.extend({
   beforeCreate() {
     deck = buildPack();
-    console.log("DECK: ", deck);
+    //console.log("DECK: ", deck);
   },
   data() {
     return {
@@ -112,6 +112,7 @@ export default Vue.extend({
 }
 
 .attribution {
+  font-size: 10px;
   color:#6d6d6d;
 }
 </style>
