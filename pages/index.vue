@@ -1,51 +1,52 @@
 <template>
   <div class="container">
     <div>
-      <img class="logo" src="https://i.imgur.com/CIV2Yhq.png" />
+      <van-row>
+        <img class="logo" src="https://i.imgur.com/CIV2Yhq.png" />
+      </van-row>
 
-      <div class="card-grid">
-        <div v-for="card in cards" class="card-flip" :key="card">
-          <CardFlip :card="card" />
+      <van-row>
+        <div class="card-grid">
+          <div v-for="card in cards" class="card-flip" :key="card">
+            <CardFlip :card="card" />
+          </div>
         </div>
-      </div>
+      </van-row>
 
-      <!-- <van-button type="primary">
-        OPEN ANOTHER PACK
-      </van-button> -->
+      <van-row>
+        <van-button type="primary" @click="reloadPage">
+          OPEN ANOTHER PACK
+        </van-button>
+      </van-row>
 
-      <a class="attribution" href="https://www.vecteezy.com/free-vector/origami">Origami Vectors by Vecteezy</a>
+      <van-row>
+        <a class="attribution" href="https://www.vecteezy.com/free-vector/origami">Origami Vectors by Vecteezy</a>
+      </van-row>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import _ from 'lodash';
+import { buildPack } from '../functions/utils/packBuilder';
+
+let deck: Object[] = [];
+
 
 export default Vue.extend({
+  beforeCreate() {
+    deck = buildPack();
+    console.log("DECK: ", deck);
+  },
   data() {
     return {
-      cards: [
-        {
-          rarity: 'rare',
-          imgURL: 'https://i.imgur.com/8P24q8A.png',
-        },
-        {
-          rarity: 'uncommon',
-          imgURL: 'https://i.imgur.com/Ppl525s.png',
-        },
-        {
-          rarity: 'common',
-          imgURL: 'https://i.imgur.com/lFmgnFj.png',
-        },
-        {
-          rarity: 'common',
-          imgURL: 'https://i.imgur.com/8P24q8A.png',
-        },
-        {
-          rarity: 'common',
-          imgURL: 'https://i.imgur.com/8P24q8A.png',
-        },
-      ]
+      cards: deck,
+    }
+  },
+  methods: {
+    reloadPage() {
+      window.location.reload();
     }
   }
 })

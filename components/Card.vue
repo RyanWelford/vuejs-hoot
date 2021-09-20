@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from 'vue';
 
 export default Vue.extend({
     props: {
@@ -38,18 +38,18 @@ export default Vue.extend({
 }
 
 .card.ultra-rare {
-    background: #72286d;
-    box-shadow: 0px 0px 20px #72286d;
-}
-.card.rare {
     background: #f1ba24;
     box-shadow: 0px 0px 20px #f1ba24;
+}
+.card.rare {
+    background: #72286d;
+    box-shadow: 0px 0px 20px #72286d;
 }
 .card.uncommon {
     background: #b12659;
 }
 .card.common {
-    background: #84d4d4;
+    background: #7f949b; /*84d4d4*/
 }
 
 .owl {
