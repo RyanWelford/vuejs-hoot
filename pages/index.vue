@@ -7,7 +7,7 @@
 
       <van-row>
         <div class="card-grid">
-          <div v-for="card in cards" class="card-flip" :key="card">
+          <div v-for="(card, idx) in cards" class="card-flip" :key="idx">
             <CardFlip :card="card" />
           </div>
         </div>
@@ -28,20 +28,38 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import _ from 'lodash';
-import { buildPack } from '../functions/utils/packBuilder';
-
-let deck: Object[] = [];
 
 
 export default Vue.extend({
-  beforeCreate() {
-    deck = buildPack();
-    //console.log("DECK: ", deck);
-  },
   data() {
     return {
-      cards: deck,
+      cards: [
+        {
+          "rarityOrder": 0,
+          "rarity": "common",
+          "imgURL": "https://i.imgur.com/Ppl525s.png"
+        },
+        {
+          "rarityOrder": 0,
+          "rarity": "common",
+          "imgURL": "https://i.imgur.com/lFmgnFj.png"
+        },
+        {
+          "rarityOrder": 1,
+          "rarity": "uncommon",
+          "imgURL": "https://i.imgur.com/Xl5borx.png"
+        },
+        {
+          "rarityOrder": 2,
+          "rarity": "rare",
+          "imgURL": "https://i.imgur.com/nfXbo4I.png"
+        },
+        {
+          "rarityOrder": 3,
+          "rarity": "ultra-rare",
+          "imgURL": "https://i.imgur.com/CIV2Yhq.png"
+        }
+      ],
     }
   },
   methods: {

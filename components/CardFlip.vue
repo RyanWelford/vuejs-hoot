@@ -5,7 +5,7 @@
                 <img class="contents" src="https://i.imgur.com/pfr8bB3.png" />
             </div>
             <div class="card back">
-                <Card :card="card" />           
+                <!-- CARD COMPONENT HERE -->          
             </div>
         </div>
     </div>
@@ -28,8 +28,7 @@ export default Vue.extend({
     },
     data() {
         return {
-            flipped: false,
-            owl: this.card
+            flipped: false
         }
     },
     methods: {

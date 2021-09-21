@@ -1,6 +1,8 @@
-import _ from 'lodash';
-import OWLS from '../owls.json';
-import { dynamicSort } from './helpers';
+const { _ } = require("lodash");
+const { dynamicSort } = require("./helpers");
+const OWLS = require("../owls.json");
+
+//import OWLS from '../owls.json';
 
 var rarities = [
     {
@@ -63,10 +65,4 @@ function packBuilder(sourceDeck) {
     return deck.sort(dynamicSort("rarityOrder"));
 }
 
-let arrayedOwls = Object.keys(OWLS).map((key) => {
-    return OWLS[key];
-});
-
-export function buildPack() {
-    return packBuilder(arrayedOwls);
-}
+module.exports = { packBuilder };
