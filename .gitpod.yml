@@ -2,7 +2,7 @@ tasks:
   - name: cors-host-config
     before: bash hostURL.sh
     command: gp open README.md
-  - name: graphQL-Client
+  - name: VueJS-Setup
     before: |
       nvm install node
       npm install -g npm@latest
