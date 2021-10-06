@@ -37,6 +37,10 @@ This is an example VueJS application using a [DataStax Astra](https://astra.new/
 
 ## Materials for the Session
 
+``` diff
+- Edit Materials Section
+```
+
 It doesn't matter if you join our workshop live or you prefer to do at your own pace, we have you covered. In this repository, you'll find everything you need for this workshop:
 
 - [Slide deck](./slides.pdf)
