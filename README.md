@@ -128,7 +128,7 @@ The status will change to `Active` when the database is ready, this will only ta
 - FIX LINK
 ```
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/datastaxdevs/<THIS_WORKSHOP>/
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/RyanWelford/vuejs-hoot/
 
 [🏠 Back to Table of Contents](#table-of-contents)
 
