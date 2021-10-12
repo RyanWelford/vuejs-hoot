@@ -364,7 +364,15 @@ And that's it for our logic! Now, the card image will be dynamic based on the ca
 </style>
 ```
 
-And that's it! We've just created a custom Vue component to dynamically display our cards! Let's test it out! In the terminal, run:
+And that's it! We've just created a custom Vue component to dynamically display our cards! Let's test it out! 
+
+First we need to add the component to `CardFlip.vue`
+
+``` javascript
+<HootCard :card="card" />   
+```
+
+In the terminal, run:
 
 ##### *`Terminal - Run`*
 ``` bash

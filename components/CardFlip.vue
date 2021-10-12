@@ -78,14 +78,14 @@ export default Vue.extend({
     position: absolute;
 }
 
-.flip-container.flipped .back {
+.flip-container.flipped .front {
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
     -o-transform: rotateY(0deg);
     -ms-transform: rotateY(0deg);
     transform: rotateY(0deg);
 }
-.flip-container.flipped .front {
+.flip-container.flipped .back {
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
