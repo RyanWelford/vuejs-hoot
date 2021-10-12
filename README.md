@@ -143,7 +143,7 @@ Let's start by taking a look at the current structure of our app.
 This app was built using [Nuxt](https://nuxtjs.org/), a framework for Vue that helps get a new app up and running quickly. We won't get into too much detail of what Nuxt does, just know that it does a lot of things under the hood so we don't have to worry about them. We can just focus on designing our app experience.
 
 ### **Pages**
-Take a look at `index.vue`. This is the primary page served by our app. You'll notice it's broken up into 3 main sections. `<template>...</template>`, `<script>...</script>`, and `<style>...</style>`. This is the standard structure of a VueJS 3 component. 
+Take a look at `pages/index.vue`. This is the primary page served by our app. You'll notice it's broken up into 3 main sections. `<template>...</template>`, `<script>...</script>`, and `<style>...</style>`. This is the standard structure of a VueJS 3 component. 
 - The `<template>` section contains our `HTML` layout
 - The `<script>` section contains the `Javascript` for logic and data management 
 - The `<style>` section contains our `CSS` styles which can be scoped to the current component only if desired.
@@ -219,6 +219,7 @@ Let's make that component.
 
 ## 5. Create a Vue Component
 
+### ✅  **Step 5a:** 
 First, let's start by creating a new file in the components folder called `HootCard.vue`. Then fill in the standard sections; `<template>`, `<script>`, and `<style>`.
 
 The `<template>` is going to be very simple. All we want is to display an image, similar to the back side of the card that we saw in the `CardFlip.vue` component.
@@ -247,7 +248,7 @@ export default Vue.extend({
 
 We know that we are going to pass in a prop for the card data, so let's set that up. We know what the data structure for the pack is, based on our hard-coded example. 
 
-##### *`Array of 5 Cards`*
+##### *`Array of 5 Cards - Reference`*
 ``` javascript
 [
     {
@@ -378,6 +379,9 @@ A browser window should open automatically.
 
 Now we have an interactive experience opening a pack of cards. The cards are always the same though, we'll need to connect our app to our database and get serverless functions up and running to make it more dynamic.
 
+##### *`Terminal`*
+`CTRL-C` to kill the running service
+
 ## 6. Database Connection Setup
 
 Ok, we have a few things to set up before we can implement our serverless functions.
@@ -387,7 +391,7 @@ Ok, we have a few things to set up before we can implement our serverless functi
 - Create `astraClient.js`
 - Install `netlify-cli`
 
-### Step 6a
+### ✅  **Step 6a:**
 First lets run a tool called `astra-setup`. You will need the authentication token you generated in [step 2](#2-create-a-security-token).
 
 ##### *`Terminal - Run`*
@@ -409,7 +413,7 @@ ASTRA_DB_KEYSPACE="vue_keyspace"
 ASTRA_GRAPHQL_ENDPOINT="<URL>"
 ```
 
-### Step 6b
+### ✅  **Step 6b:**
 Now let's install the library for connecting to our Astra DB.
 
 ##### *`Terminal - Run`*
@@ -419,7 +423,7 @@ npm install @astrajs/collections
 
 We will be using the ***Document API*** to store and retrieve `JSON` Documents to the database. First though, we need to create a utility to create the client that our serverless functions will use.
 
-### Step 6c
+### ✅  **Step 6c:**
 Create a new file in `functions/utils/` called `astraClient.js`.
 
 ##### *`functions/utils/astraClient.js`*
@@ -468,7 +472,7 @@ This function can now be used anywhere to get a reference to this collection.
 
 > *If you want to have a more flexible function, you can replace the `"cards"` name with a parameter that gets passed in, allowing this one function to reference any specified collection.
 
-### Step 6d
+### ✅  **Step 6d:**
 Alright, one last thing before we can get to our serverless functions is to install `netlify-cli`. Netlify is a Global CDN that provides hosting solutions to web-apps and also provides a back-end infrastructure to server up our serverless functions. Our function implementation is not restricted to Netlify, but we have found it to be a very robust and easy-to-use solution. The CLI tool we are installing here will allow us to run a local evironment that emulates the production environment and give us access to the serverless functions.
 
 ##### *`Terminal - Run`*

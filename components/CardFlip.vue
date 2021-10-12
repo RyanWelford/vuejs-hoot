@@ -1,10 +1,10 @@
 <template>
     <div class="flip-container" :class="{ 'flipped': flipped}" @click="flipCard()">
         <div class="card-container">
-            <div class="card front">
+            <div class="card back">
                 <img class="contents" src="https://i.imgur.com/pfr8bB3.png" />
             </div>
-            <div class="card back">
+            <div class="card front">
                 <!-- CARD COMPONENT HERE -->          
             </div>
         </div>
@@ -49,8 +49,8 @@ export default Vue.extend({
     min-height: 120px;
     cursor: pointer;
 }
-.front,
-.back {
+.back,
+.front {
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -o-backface-visibility: hidden;
@@ -69,7 +69,7 @@ export default Vue.extend({
     left: 0;
     width: 100%;
 }
-.back {
+.front {
     -webkit-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
     -o-transform: rotateY(-180deg);
