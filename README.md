@@ -224,7 +224,7 @@ First, let's start by creating a new file in the components folder called `HootC
 
 The `<template>` is going to be very simple. All we want is to display an image, similar to the back side of the card that we saw in the `CardFlip.vue` component.
 
-##### *`components/HootCard.vue`*
+##### *`components/HootCard.vue - <template>`*
 ``` html
 <template>
     <div class="card" :class="rarity">
@@ -236,14 +236,17 @@ The `<template>` is going to be very simple. All we want is to display an image,
 Notice that we are utilizing a few custom css classes. We'll define those in the `<style>` section. We also have some data references: `:class="rarity"` and `:src="imgURL"`. This is so that we can dynamically change the elements based on the type of card.
 
 Let's get some of that data set up.
+In the `<script>` section:
 
-##### *`components/HootCard.vue`*
-``` javascript
+##### *`components/HootCard.vue - <script>`*
+``` html
+<script>
 import Vue from 'vue';
 
 export default Vue.extend({
 
 })
+</script>
 ```
 
 We know that we are going to pass in a prop for the card data, so let's set that up. We know what the data structure for the pack is, based on our hard-coded example. 
@@ -281,7 +284,7 @@ We know that we are going to pass in a prop for the card data, so let's set that
 
 We are dealing primarily with the `rarity` and `imgURL` properties. So, in our `props` we need to specify an object with those two properties.
 
-##### *`components/HootCard.vue`*
+##### *`components/HootCard.vue - <script>`*
 ``` javascript
 import Vue from 'vue';
 
@@ -302,7 +305,7 @@ export default Vue.extend({
 
 Now we need to return those `props` as `data` values so our template can use them.
 
-##### *`components/HootCard.vue`*
+##### *`components/HootCard.vue - <script>`*
 ``` javascript
 import Vue from 'vue';
 
@@ -329,7 +332,7 @@ export default Vue.extend({
 
 And that's it for our logic! Now, the card image will be dynamic based on the card that's passed in, as well as the style. Speaking of which let's get that custom css in here.
 
-##### *`components/HootCard.vue`*
+##### *`components/HootCard.vue - <style>`*
 ``` html
 <style scoped>
 .card {
