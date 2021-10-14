@@ -1,8 +1,5 @@
 const { _ } = require("lodash");
 const { dynamicSort } = require("./helpers");
-const OWLS = require("../owls.json");
-
-//import OWLS from '../owls.json';
 
 var rarities = [
     {
