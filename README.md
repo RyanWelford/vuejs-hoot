@@ -484,7 +484,7 @@ This function can now be used anywhere to get a reference to this collection.
 > *If you want to have a more flexible function, you can replace the `"cards"` name with a parameter that gets passed in, allowing this one function to reference any specified collection.
 
 ### ✅  **Step 6d:**
-Alright, one last thing before we can get to our serverless functions is to install `netlify-cli`. Netlify is a Global CDN that provides hosting solutions to web-apps and also provides a back-end infrastructure to server up our serverless functions. Our function implementation is not restricted to Netlify, but we have found it to be a very robust and easy-to-use solution. The CLI tool we are installing here will allow us to run a local evironment that emulates the production environment and give us access to the serverless functions.
+Alright, one last thing before we can get to our serverless functions is to install `netlify-cli`. Netlify is a Global CDN that provides hosting solutions to web-apps and also provides a back-end infrastructure to serve up our serverless functions. Our function implementation is not restricted to Netlify, but we have found it to be a very robust and easy-to-use solution. The CLI tool we are installing here will allow us to run a local evironment that emulates the production environment and give us access to the serverless functions.
 
 ##### *`Terminal - Run`*
 ``` bash
